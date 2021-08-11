@@ -9,11 +9,13 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MoviesService } from './services/movies.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesListComponent
+    MoviesListComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
