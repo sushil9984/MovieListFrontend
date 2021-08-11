@@ -1,0 +1,11 @@
+.img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.moviesPoster {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}

@@ -1,3 +1,47 @@
-<p>
-  movie-details works!
-</p>
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+    <th width="15%">Title</th>
+    <th width="10%">IMDB Id</th>
+    <th width="15%">Listing Type</th>
+    <th width="10%">IMDB Ratings</th>
+    <th width="40%">Plot</th>
+    <th width="10%">Sound Effects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ response.result.movieDetails.title }}</td>
+      <td>{{ response.result.movieDetails.imdbID }}</td>
+      <td>{{ response.result.movieDetails.listingType }}</td>
+      <td>{{ response.result.movieDetails.imdbRating }}</td>
+      <td>{{ response.result.movieDetails.plot }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let sound of response.result.movieDetails.soundEffects">
+              <span>{{sound}}</span>
+          </li>
+        </ul>
+      </td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+    <th>Poster</th>
+    <th>Stills</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img class="moviesPoster" [src]="response.result.movieDetails.poster"></td>
+      <td>
+        <div class="customcls" *ngFor="let still of response.result.movieDetails.stills">
+          <img class="float_left img" [src]="still">
+        </div>
+      </td>
+  </tr>
+  </tbody>
+</table>
