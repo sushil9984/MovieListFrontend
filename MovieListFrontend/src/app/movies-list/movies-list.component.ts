@@ -9,14 +9,25 @@ import { MoviesService } from '../services/movies.service';
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
-
   movies: MovieInformation[] = [];
+  title: any;
 
   constructor(private _moviesService: MoviesService) { }
 
   ngOnInit() {
     this._moviesService.getMovies()
     .subscribe((data: MoviesResponse) => this.movies = data.result.movies);
+  }
+
+  Search() {
+    if(this.title == ""){
+      this.ngOnInit();
+    }
+    else{
+        this.movies = this.movies.filter(res => {
+        return res.title.toLocaleLowerCase().match(this.title.toLocaleLowerCase());
+      })
+    }
   }
 
 }
