@@ -8,8 +8,7 @@ import { MoviesResponse } from '../models/moviesList/Response';
   providedIn: 'root'
 })
 export class MoviesService {
-
-  private _url = "/assets/data/movies.json";
+  private _url = "https://localhost:44364/api/MovieInformation";
 
   constructor(private http: HttpClient) { }
 
