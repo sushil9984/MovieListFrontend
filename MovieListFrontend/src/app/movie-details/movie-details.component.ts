@@ -18,6 +18,10 @@ export class MovieDetailsComponent implements OnInit {
     private _moviesService: MoviesService) { }
 
   ngOnInit() {
+    this.getMovieDetails();
+  }
+
+  getMovieDetails() {
     this._moviesService.getMovieDetails(this.route.snapshot.paramMap.get('title'))
     .subscribe((data: MovieDetailsResponse) => this.response = data);
   }
