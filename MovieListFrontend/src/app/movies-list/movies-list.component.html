@@ -5,13 +5,13 @@
 <table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Language</th>
+      <th (click)="sort('title')">Title&nbsp;<i class="fa fa-sort"></i></th>
+      <th (click)="sort('location')">Location&nbsp;<i class="fa fa-sort"></i></th>
+      <th (click)="sort('language')">Language&nbsp;<i class="fa fa-sort"></i></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let movie of movies">
+    <tr *ngFor="let movie of movies | orderBy: key: reverse">
       <td>{{ movie.title }}</td>
       <td>{{ movie.location }}</td>
       <td>{{ movie.language }}</td>

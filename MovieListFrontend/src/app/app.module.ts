@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MoviesService } from './services/movies.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MoviesService } from './services/movies.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]

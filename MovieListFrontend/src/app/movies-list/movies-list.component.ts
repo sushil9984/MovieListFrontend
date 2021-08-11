@@ -30,4 +30,10 @@ export class MoviesListComponent implements OnInit {
     }
   }
 
+  key: string = 'title';
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
 }
