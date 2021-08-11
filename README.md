@@ -14,3 +14,8 @@ There are 2 Components
 2. MovieDetailsComponent displays other details such as Poster, Stills, Sound Effects, Ratings etc. for a specific movie which the user has selected.
 - User can go back to the main list by clicking on the GoBack button.
  
+Execution - 
+- Please make sure you start Backend application before running Frontend.
+- Clone the repository locally and run using an IDE such as Visual Studio Code
+- You can use ng serve -o to run the application on a default port of 4200.
+- I have used Routing so use - http://localhost:4200/movies to get started. 
