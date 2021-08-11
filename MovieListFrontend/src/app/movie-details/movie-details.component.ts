@@ -26,4 +26,7 @@ export class MovieDetailsComponent implements OnInit {
     .subscribe((data: MovieDetailsResponse) => this.response = data);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
