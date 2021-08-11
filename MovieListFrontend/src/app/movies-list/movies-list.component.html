@@ -8,6 +8,7 @@
       <th (click)="sort('title')">Title&nbsp;<i class="fa fa-sort"></i></th>
       <th (click)="sort('location')">Location&nbsp;<i class="fa fa-sort"></i></th>
       <th (click)="sort('language')">Language&nbsp;<i class="fa fa-sort"></i></th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,9 @@
       <td>{{ movie.title }}</td>
       <td>{{ movie.location }}</td>
       <td>{{ movie.language }}</td>
+      <td>
+        <a href="/movieDetails/{{movie.title}}" type="button" class="btn btn-success btn-sm">View Details</a>
+      </td>
     </tr>
   </tbody>
 </table>
